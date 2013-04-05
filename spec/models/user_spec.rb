@@ -77,12 +77,12 @@ describe User do
   end
 
   describe "when password doesn't match confirmation" do
-    before {@suer.password_confirmation = "mismatch"}
+    before {@user.password_confirmation = "mismatch"}
 	it {should_not be_valid}
   end
   
   describe "when password confirmation is nil" do
-    before {@user.pass_confirmation = nil}
+    before {@user.password_confirmation = nil}
 	it {should_not be_valid}
   end
   
@@ -94,7 +94,6 @@ describe User do
   describe "return value of authenticate method" do
     before {@user.save}
 	let(:found_user){User.find_by_email(@user.email)}
-  end
 
 	describe "with valid password" do
 	  it {should == found_user.authenticate(@user.password)}
@@ -106,8 +105,8 @@ describe User do
 	  it {should_not == user_for_invalid_password}
 	  specify{user_for_invalid_password.should be_false}
 	end
+  end
 end
-
 
 
 
