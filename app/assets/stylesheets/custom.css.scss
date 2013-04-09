@@ -2,7 +2,7 @@
 
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
-/* mixins, variables, etc. */
+
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -115,7 +115,7 @@ footer {
 .debug_dump {
 	clear: both;
 	float: left;
-	width: 100%；
+	width: 100%;
 	margin-top: 45px;
 	@include box_sizing;
 }
