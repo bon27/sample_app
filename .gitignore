@@ -16,4 +16,4 @@
 
 # other files
 *.swp
-
+.sqlite3-journal
