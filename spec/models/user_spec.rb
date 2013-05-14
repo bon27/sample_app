@@ -139,6 +139,7 @@ describe User do
   describe "micropost association" do
     
 	before {@user.save}
+	
 	let!(:older_micropost) do
 	  FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
 	end
@@ -155,9 +156,21 @@ describe User do
 	  @user.destroy
 	  microposts.should_not be_empty
 	  microposts.each do |micropost|
-	    Micropost.find_by_id(micropost.id).should be_nil
+		  lambda do
+		    Micropost.find(micropost.id)
+	      end.should raise_error(ActiveRecord::RecordNotFound)
 	  end
 	end
+
+	describe "status" do
+	  let(:unfollowed_post) do
+	    FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
+	  end
+
+	  its(:feed) {should include(newer_micropost)}
+	  its(:feed) {should include(older_micropost)}
+	  its(:feed) {should_not include(unfollowed_post)}
+    end
   end
 end
 

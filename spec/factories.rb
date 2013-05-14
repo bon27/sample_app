@@ -12,7 +12,6 @@ FactoryGirl.define do
 
   factory :micropost do
     content "Lorem iterm"
-	user
   end
 end
 
