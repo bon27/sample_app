@@ -30,8 +30,9 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   
   def feed
-    Micropost.where("user_id = ?",id)
+    Micropost.from_users_followed_by(self)
   end
+
   def following?(other_user)
 	  relationships.find_by_followed_id(other_user.id)
   end
@@ -43,7 +44,8 @@ class User < ActiveRecord::Base
   def unfollow!(other_user)
 	  relationships.find_by_followed_id(other_user.id).destroy
   end
-
+  
+  
   private
     def create_remember_token
 	  self.remember_token = SecureRandom.urlsafe_base64
