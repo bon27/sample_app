@@ -16,4 +16,8 @@
 
 # other files
 *.swp
+~
+.idea
+.project
+.DS_Store
 .sqlite3-journal
