@@ -8,6 +8,7 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  match '/mockup', to: 'mockups#index'
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
