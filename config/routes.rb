@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "frontend", to: 'frontend#index'
+
   resources :users do
 	  member do
 		  get :following, :followers
@@ -9,6 +11,7 @@ SampleApp::Application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   match '/mockup', to: 'mockups#index'
+  get   '/mockup/show', to: 'mockups#show'
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
@@ -16,7 +19,6 @@ SampleApp::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

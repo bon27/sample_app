@@ -1,0 +1,30 @@
+!!! 5
+%html
+  %head
+    %link(rel='stylesheet' type='text/css' href='/assets/frontend.css?body=1')
+    %title test for front end tech
+  %body
+    %ul#register
+      %li#reg Not registered? <a href="/register/"> Register</a>
+      %li#find <a href='/find/'> Find a store </a>
+    %div#message
+      %p <strong> Special this week: </strong> $2 shipping on all orders!<a href='/special/'>Learn more!</a>
+      %P free offers for all guys!
+    %div#CV
+      %dl
+        %dt Ruby Skills
+        %dd.img
+          %img{src: image_path("ruby.png"), width: '80', height: '80', alt: 'Ruby'}
+        %dd  I have used RoR to construct my own website
+      %dl.alt
+        %dt Linux Experience
+        %dd.img
+          %img{src: image_path("linux.png"), width: '80', height: '80', alt: 'Linux'}
+        %dd Ubuntu Linux is my daily OS.I want to test if it works for the larger block in this area, and ensure the long sentence doesn't make anyt errors here. that is because that I have settled down the margins for the description text as well as for the image.
+      %dl
+        %dt about Rails
+        %dd.img
+          %img{src: image_path("rails.png"), width: '80', height: '80', alt: 'Rails'}
+        %dd Rails rocks. I use it to develop SaaS
+
+
