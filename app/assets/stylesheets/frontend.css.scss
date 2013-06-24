@@ -79,7 +79,7 @@ ul li {
   float: right;
   margin: 0;
   padding: 8px 20px;
-  background: url('http://www.cevs.ucdavis.edu/shared/art/mag_glass.gif') no-repeat 0 50%;
+  //background: url('http://www.cevs.ucdavis.edu/shared/art/mag_glass.gif') no-repeat 0 50%;
 }
 
 #message {
@@ -101,7 +101,7 @@ ul li {
     text-decoration: none;
     font-weight: normal;
     color: #fff;
-    background: url('http://i393.photobucket.com/albums/pp14/BebeGenuine/animated-arrow.gif') no-repeat 0 50%;
+    //background: url('http://i393.photobucket.com/albums/pp14/BebeGenuine/animated-arrow.gif') no-repeat 0 50%;
   }
 }
 
@@ -158,6 +158,111 @@ ul li {
   margin: 0 0 0 8px;
   }
 }
+
+.box {
+  float: left;
+  margin: 0 0 0 20px;
+  border: 1px green;
+  border-style: dashed solid dashed solid;
+  border-radius: 15px;
+  width: 273px;
+  h3 {
+    margin: 0;
+    padding: 6px 8px 4px 10px;
+    border-bottom: 1px solid #e0cfab;
+    color: #444;
+    font-size: 130%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: -moz-linear-gradient(top, green, #fff);
+  }
+  ul {
+    margin: 0;
+    padding: 14px 10px;
+    list-style: none;
+    li {
+      margin: 0 0 6px;
+      padding: 0;
+    }
+  }
+}
+body {
+  background: #b5b5b5;
+  margin: 0;
+  padding: 30px;
+  font-family: "Lucida Grande", Arial, sans-serif;
+}
+table {
+  clear: both;
+  width: 100%;
+  position: relative;
+  left: -4px;
+  top: -5px;
+  border: 1px solid red;
+  background: #fff;
+  a {
+    color: #77985c;
+    display: block;
+  }
+  th, td {
+    margin: 0;
+    padding: 8px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .name {
+    text-align: left;
+  }
+  tr {
+    background: #e6e6e6;
+  }
+}
+table tr.alt {
+  background: #f1f1f1;
+}
+table th {
+  color: #999;
+}
+
+caption {
+  background: #fff;
+  border: 1px solid #000;
+  border-bottom: none;
+  margin-top: 20px;
+  padding: 8px 20px;
+  text-align: left;
+}
+
+.forum {
+  background: #919191;
+}
+#wraper {
+}
+#navbar {
+  width: 100%;
+  background: #369;
+  margin: 0;
+  float: left;
+}
+#content {
+  float: left;
+  background: green;
+  width: 65%;
+  margin-right: 5%;
+  max-width: 600px;
+}
+#sidebar {
+  float: left;
+  background: #9c3;
+  width: 30%;
+}
+#footer {
+  clear: both;
+  background: #cc9;
+}
+
+
+
 
 
 

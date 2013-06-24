@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
   get "frontend", to: 'frontend#index'
-
+  get "liquid", to: 'frontend#liquid'
   resources :users do
 	  member do
 		  get :following, :followers
